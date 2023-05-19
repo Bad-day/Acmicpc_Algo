@@ -1,15 +1,13 @@
-import sys
-
-A, B, C = map(int, sys.stdin.readline().rstrip().split())
-
-def power(x, n, mod):
+import sys;input=sys.stdin.readline
+A,B,C = map(int, input().split())
+def square(x,n,mod):
     if n == 1:
-        return x % mod
+        return x%mod
     else:
-        c = power(x, n // 2, mod) % mod
-        if n % 2 == 0:
-            return (c * c) % mod
+        c = square(x,n//2,mod)
+        if n %2==0:
+            return (c*c) %mod
         else:
-            return (c * c * x) % mod
+            return (c*c*x )%mod
 
-print(power(A, B, C))
+print(square(A,B,C))
