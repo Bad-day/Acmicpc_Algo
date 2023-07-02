@@ -1,4 +1,6 @@
-a,b = input().split()
-a = int(a) # 정수형으로 타입을 변환
-b = int(b) 
-print(a+ b)
+A,B =input().split(" ")
+r=0
+A=int(A)
+B=int(B)
+r=A+B
+print(r)
